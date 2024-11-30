@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-30 14:32:35.106739",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "user_id",
+  "profile_id",
+  "column_break_8kyb6",
+  "key",
+  "from_date",
+  "to_date",
+  "section_break_2kjrr",
+  "limit",
+  "column_break_bf70y",
+  "page_no"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Id",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Profile Id",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8kyb6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2kjrr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "limit",
+   "fieldtype": "Data",
+   "label": "Limit"
+  },
+  {
+   "fieldname": "column_break_bf70y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "page_no",
+   "fieldtype": "Data",
+   "label": "Page No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-30 14:36:38.964061",
+ "modified_by": "Administrator",
+ "module": "TradeIndia_Integration",
+ "name": "TradeIndia API Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
