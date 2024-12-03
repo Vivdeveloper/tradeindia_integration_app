@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-11-30 14:32:35.106739",
+ "creation": "2024-12-03 18:39:48.071177",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -86,10 +86,10 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-11-30 14:36:38.964061",
+ "modified": "2024-12-03 18:39:48.071177",
  "modified_by": "Administrator",
  "module": "TradeIndia_Integration",
- "name": "TradeIndia API Settings",
+ "name": "Tradeindia API Settings",
  "owner": "Administrator",
  "permissions": [
   {
