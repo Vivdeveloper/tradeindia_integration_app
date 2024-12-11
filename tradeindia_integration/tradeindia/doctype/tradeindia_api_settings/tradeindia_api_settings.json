@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-10 18:01:04.181230",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_eu83",
+  "enabled",
+  "user_id",
+  "profile_id",
+  "column_break_jgpc",
+  "key",
+  "from_date",
+  "to_date",
+  "section_break_nmlc",
+  "limit",
+  "column_break_9abh",
+  "page_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_eu83",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID"
+  },
+  {
+   "fieldname": "profile_id",
+   "fieldtype": "Data",
+   "label": "Profile ID"
+  },
+  {
+   "fieldname": "column_break_jgpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key",
+   "fieldtype": "Data",
+   "label": "Key"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_break_nmlc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "limit",
+   "fieldtype": "Data",
+   "label": "Limit"
+  },
+  {
+   "fieldname": "column_break_9abh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "page_no",
+   "fieldtype": "Data",
+   "label": "Page NO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-10 18:05:03.997915",
+ "modified_by": "Administrator",
+ "module": "Tradeindia",
+ "name": "TradeIndia API settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
