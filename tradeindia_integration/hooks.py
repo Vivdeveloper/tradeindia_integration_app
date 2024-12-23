@@ -242,3 +242,9 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+scheduler_events = {
+    "hourly": [
+        "tradeindia_integration.tradeindia.doctype.tradeindia_api_settings.tradeindia_api_settings.fetch_tradeindia_data",
+        "tradeindia_integration.tradeindia.doctype.tradeindia_lead.tradeindia_lead.process_tradeindia_leads"
+    ]
+}

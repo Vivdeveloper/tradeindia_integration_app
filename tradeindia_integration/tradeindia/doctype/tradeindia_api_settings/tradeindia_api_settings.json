@@ -10,13 +10,7 @@
   "user_id",
   "profile_id",
   "column_break_jgpc",
-  "key",
-  "from_date",
-  "to_date",
-  "section_break_nmlc",
-  "limit",
-  "column_break_9abh",
-  "page_no"
+  "key"
  ],
  "fields": [
   {
@@ -25,6 +19,7 @@
   },
   {
    "default": "0",
+   "description": "According to tradeindia greather than 24 hours not allowed for inquiries",
    "fieldname": "enabled",
    "fieldtype": "Check",
    "label": "Enabled"
@@ -45,42 +40,14 @@
   },
   {
    "fieldname": "key",
-   "fieldtype": "Data",
+   "fieldtype": "Password",
    "label": "Key"
-  },
-  {
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From Date"
-  },
-  {
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To Date"
-  },
-  {
-   "fieldname": "section_break_nmlc",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "limit",
-   "fieldtype": "Data",
-   "label": "Limit"
-  },
-  {
-   "fieldname": "column_break_9abh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "page_no",
-   "fieldtype": "Data",
-   "label": "Page NO"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-10 18:05:03.997915",
+ "modified": "2024-12-23 13:05:32.218770",
  "modified_by": "Administrator",
  "module": "Tradeindia",
  "name": "TradeIndia API settings",

@@ -1,33 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:query_id",
  "creation": "2024-12-11 11:30:15.413117",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_inyp",
   "query_id",
   "tradeindia_lead_data",
   "section_break_g2xz",
   "status",
   "output",
   "column_break_i6we",
-  "created_on",
-  "integration_request"
+  "created_on"
  ],
  "fields": [
   {
-   "fieldname": "section_break_inyp",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "query_id",
    "fieldtype": "Data",
-   "label": "Query ID"
+   "label": "Query ID",
+   "unique": 1
   },
   {
    "fieldname": "tradeindia_lead_data",
-   "fieldtype": "Code",
+   "fieldtype": "JSON",
    "label": "TradeIndia Lead Data"
   },
   {
@@ -42,8 +38,9 @@
   },
   {
    "fieldname": "output",
-   "fieldtype": "Data",
-   "label": "Output"
+   "fieldtype": "Link",
+   "label": "Lead ",
+   "options": "Lead"
   },
   {
    "fieldname": "column_break_i6we",
@@ -53,19 +50,15 @@
    "fieldname": "created_on",
    "fieldtype": "Datetime",
    "label": "Created on"
-  },
-  {
-   "fieldname": "integration_request",
-   "fieldtype": "Data",
-   "label": "Integration Request "
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 11:32:24.906360",
+ "modified": "2024-12-23 13:06:49.465836",
  "modified_by": "Administrator",
  "module": "Tradeindia",
  "name": "TradeIndia Lead",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
