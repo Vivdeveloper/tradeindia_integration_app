@@ -48,21 +48,9 @@ def fetch_tradeindia_data():
 				else:
 					print(f"Duplicate entry found for rfi_id: {rfi_id}")
 		else:
-			frappe.throw(f"Failed to fetch data from TradeIndia API: {str(e)}")
+			frappe.log_error("Unexpected data format from TradeIndia API", "TradeIndia Integration")
 	except requests.exceptions.RequestException as e:
-		frappe.log_error(str(e), "TradeIndia API Fetch Error")
-    # except Exception as e:
-    #     frappe.log_error(str(e), "TradeIndia Data Processing Error") 
-             
-
-
-			 #     # Process and store data
-    #     # for inquiry in data.get("inquiries", []):
-    #     #     # Example: Log the data or store in a custom doctype
-    #     #     frappe.get_doc({
-    #     #         "doctype": "TradeIndia Inquiry",
-    #     #         "inquiry_data": inquiry
-    #     #     }).insert(ignore_permissions=True)
-
-    #     # frappe.db.commit()
-    # return data
+		frappe.log_error(f"RequestException: {str(e)}", "TradeIndia API Fetch Error")
+	except Exception as e:
+		frappe.log_error(f"Unexpected error: {str(e)}", "TradeIndia API Error")
+    
