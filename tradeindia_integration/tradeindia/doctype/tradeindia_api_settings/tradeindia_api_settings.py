@@ -25,8 +25,8 @@ def fetch_tradeindia_data():
 	key = settings.key
 	from_date =  today()
 	to_date =  today()
-	limit = settings.limit or 10
-	page_no = settings.page_no or 1
+	limit =  100
+	page_no =  1
 	
 	url = f"https://www.tradeindia.com/utils/my_inquiry.html?userid={user_id}&profile_id={profile_id}&key={key}&from_date={from_date}&to_date={to_date}&limit={limit}&page_no={page_no}"
 	
