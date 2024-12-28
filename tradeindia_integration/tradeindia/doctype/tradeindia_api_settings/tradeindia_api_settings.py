@@ -48,7 +48,7 @@ def fetch_tradeindia_data():
 				else:
 					print(f"Duplicate entry found for rfi_id: {rfi_id}")
 		else:
-			frappe.log_error("Unexpected data format from TradeIndia API", "TradeIndia Integration")
+			frappe.throw(f"Failed to fetch data from TradeIndia API: {str(e)}")
 	except requests.exceptions.RequestException as e:
 		frappe.log_error(str(e), "TradeIndia API Fetch Error")
     # except Exception as e:
