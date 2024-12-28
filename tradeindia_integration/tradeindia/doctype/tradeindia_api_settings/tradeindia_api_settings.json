@@ -40,14 +40,14 @@
   },
   {
    "fieldname": "key",
-   "fieldtype": "Password",
+   "fieldtype": "Data",
    "label": "Key"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-23 13:05:32.218770",
+ "modified": "2024-12-28 12:31:46.751522",
  "modified_by": "Administrator",
  "module": "Tradeindia",
  "name": "TradeIndia API settings",

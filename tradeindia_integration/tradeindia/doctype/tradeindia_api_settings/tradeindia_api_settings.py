@@ -34,6 +34,7 @@ def fetch_tradeindia_data():
 		response = requests.get(url)
 		response.raise_for_status()
 		data = response.json()
+		print(url)
 		
 		if isinstance(data, list):
 			for record in data:
