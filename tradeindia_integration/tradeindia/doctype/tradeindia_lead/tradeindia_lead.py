@@ -51,7 +51,7 @@ def fetch_tradeindia_data(tradeindia_lead_name):
 	lead.company_name = company_name
 	lead.job_title = subject
 	# lead.notes = message
-	# lead.source = "TradeIndia"
+	lead.source = "Trade India"
 	lead.city = sender_city
 	lead.state = sender_state
 	
@@ -103,8 +103,8 @@ def process_tradeindia_leads():
             lead.lead_name = lead_name or "Unknown Lead"
             lead.email_id = email
             lead.phone = phone
-            lead.company_name = company_name
-            # lead.job_title = subject
+            lead.company_name = company_name		
+            lead.source = "Trade India"
             lead.city = sender_city
             lead.state = sender_state
             lead.insert(ignore_permissions=True)
