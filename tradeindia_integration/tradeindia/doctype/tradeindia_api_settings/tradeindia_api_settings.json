@@ -10,7 +10,8 @@
   "user_id",
   "profile_id",
   "column_break_jgpc",
-  "key"
+  "key",
+  "source"
  ],
  "fields": [
   {
@@ -42,12 +43,18 @@
    "fieldname": "key",
    "fieldtype": "Data",
    "label": "Key"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Lead Source"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-28 12:31:46.751522",
+ "modified": "2025-01-17 11:53:03.858471",
  "modified_by": "Administrator",
  "module": "Tradeindia",
  "name": "TradeIndia API settings",

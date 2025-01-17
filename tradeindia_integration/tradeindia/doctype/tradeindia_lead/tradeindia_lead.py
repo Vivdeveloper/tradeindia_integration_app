@@ -19,7 +19,7 @@ def fetch_tradeindia_data(tradeindia_lead_name):
 	except frappe.DoesNotExistError:
 		frappe.throw(f"TradeIndia Lead {tradeindia_lead_name} does not exist.")
 
-	
+	settings = frappe.get_single("TradeIndia API settings")
 	tradeindia_lead_data = tradeindia_lead.tradeindia_lead_data
 	if not tradeindia_lead_data:
 		frappe.throw("No data found in tradeindia_lead_data.")
@@ -39,6 +39,7 @@ def fetch_tradeindia_data(tradeindia_lead_name):
 	sender_city = tradeindia_lead_data.get("sender_city")  
 	sender_state = tradeindia_lead_data.get("sender_state")  
 	sender_country = tradeindia_lead_data.get("sender_country") 
+	queryid= tradeindia_lead_data.get("rfi_id")
 
 	if frappe.db.exists("Lead", {"email_id": email, "phone": phone}):
 		frappe.msgprint(f"Lead with phone {phone} already exists.")
@@ -51,9 +52,10 @@ def fetch_tradeindia_data(tradeindia_lead_name):
 	lead.company_name = company_name
 	lead.job_title = subject
 	# lead.notes = message
-	lead.source = "Trade India"
+	lead.source = settings.source
 	lead.city = sender_city
 	lead.state = sender_state
+	lead.custom_query_id = queryid
 	
 	# lead.inquiry_type = inquiry_type
 	lead.insert(ignore_permissions=True)
@@ -72,6 +74,8 @@ def process_tradeindia_leads():
         filters={"status": ["!=", "Completed"]},
         fields=["name", "tradeindia_lead_data"]
     )
+	
+    settings = frappe.get_single("TradeIndia API settings")
 
     for lead in leads_to_process:
         tradeindia_lead_name = lead.get("name")
@@ -93,6 +97,8 @@ def process_tradeindia_leads():
             inquiry_type = tradeindia_lead_data.get("inquiry_type")
             sender_city = tradeindia_lead_data.get("sender_city")
             sender_state = tradeindia_lead_data.get("sender_state")
+            queryid = tradeindia_lead_data.get("rfi_id")
+			
 
             if frappe.db.exists("Lead", {"email_id": email, "phone": phone}):
                 # frappe.db.set_value("TradeIndia Lead", tradeindia_lead_name, "status", "Duplicate")
@@ -104,9 +110,10 @@ def process_tradeindia_leads():
             lead.email_id = email
             lead.phone = phone
             lead.company_name = company_name		
-            lead.source = "Trade India"
+            lead.source = settings.source
             lead.city = sender_city
             lead.state = sender_state
+            lead.custom_query_id = queryid
             lead.insert(ignore_permissions=True)
 
             frappe.db.set_value("TradeIndia Lead", tradeindia_lead_name, "output", lead.name)
